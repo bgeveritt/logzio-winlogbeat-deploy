@@ -1,0 +1,1 @@
+# logzio-winlogbeat-deploy
