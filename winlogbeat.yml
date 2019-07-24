@@ -1,0 +1,34 @@
+###################### Logz.io Winlogbeat Configuration Example ########################
+
+winlogbeat.event_logs:
+  - name: Application
+  - name: Security
+  - name: System
+
+#==================== Logz.io =========================
+
+fields:
+  logzio_codec: json
+  token: <<LOGZ.IO TOKEN>>
+  type: wineventlog
+fields_under_root: true
+
+#==================== Output ==========================
+
+output.logstash:
+  hosts: ["<<LOGZ.IO LISTENER>>"]
+  ssl:
+    certificate_authorities: ["<<LOGZ.IO CERTIFICATE>>"]
+
+#The following processors are to ensure compatibility with version 7
+processors:
+- rename:
+    fields:
+     - from: "agent"
+       to: "beat_agent"
+    ignore_missing: true
+- rename:
+    fields:
+     - from: "log.file.path"
+       to: "source"
+    ignore_missing: true
