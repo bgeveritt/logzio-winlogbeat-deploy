@@ -12,7 +12,7 @@ This PowerShell script allows you to deploy Winlogbeat on one or multiple Window
 
 * Default values are supplied in the script; to change any that are specific to your environment, edit `InstallLogzioWinlogbeat.ps1` and update the values under the section that reads `#DEFAULT VALUES; REPLACE ONLY IF NEEDED`
 * The current release of this script installs Winlogbeat v7.2.0
-* The current release of this script only works on Windows instances that have no previous installation of Winlogbeat
+* The current release of this script only works on Windows instances that have **no previous installation** of Winlogbeat
 * The current release of this script supports Application, System, and Security events
 
 #### Instructions:
