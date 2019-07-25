@@ -6,6 +6,7 @@ This PowerShell script allows you to deploy Winlogbeat on one or multiple Window
 
 * Windows (64-bit)
 * PowerShell 5.1
+* Ensure the appropriate Execution Policy is set on the machine (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-5.1)
 
 #### Notes:
 
