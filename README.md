@@ -14,6 +14,7 @@ This PowerShell script allows you to deploy Winlogbeat on one or multiple Window
 * The current release of this script installs Winlogbeat v7.2.0
 * The current release of this script only works on Windows instances that have **no previous installation** of Winlogbeat
 * The current release of this script supports Application, System, and Security events
+* To deploy across multiple Windows machines, a third-party orchestration tool (e.g.: Ansible, Chef, Puppet, etc.) will be necessary.
 
 #### Instructions:
 
@@ -24,6 +25,5 @@ This PowerShell script allows you to deploy Winlogbeat on one or multiple Window
   `.\InstallLogzioWinlogbeat.ps1 -token QieuWHajIABErtkatjavfdjNhu -listener listener.logz.io:5015`
  
 * The script will download Winlogbeat, the Logz.io certificate, apply the necessary configuration to your `winlogbeat.yml`, install it as a service, and start it. Pending a successful completion, you should see logs surfacing within seconds.
-* To deploy across multiple Windows machines, a third-party orchestration tool (e.g.: Ansible, Chef, Puppet, etc.) will be necessary.
 
 [Download]: https://github.com/bgeveritt/logzio-winlogbeat-deploy/releases/download/1.0/InstallWinlogbeatLogzio.ps1
